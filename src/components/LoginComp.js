@@ -86,7 +86,7 @@ const LoginComp = () => {
       <div className="hero">
         <div className="d-flex align-items-center justify-content-center" style={{ marginTop: '50px' }}>
           {!isLoggedIn && (
-            <Card className="login-card small-card" style={{ width: '400px', backgroundColor: 'white' }}>
+            <Card className="login-card small-card" style={{ width: '400px', backgroundColor: 'white', marginBottom: '130px', marginTop:'50px '}}>
               <Card.Body>
                 <Card.Title className="login-card-title">Login</Card.Title>
                 <Card.Text>
@@ -124,7 +124,7 @@ const LoginComp = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <p className="text-center">
+                <p className="text-center" style={{ marginTop: '50px'}}>
                   Belum memiliki akun? <Link to="/signup">Daftar Sekarang</Link>
                 </p>
               </Card.Footer>
