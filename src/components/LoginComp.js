@@ -53,7 +53,7 @@ const LoginComp = () => {
     <div>
       {/* Navbar */}
       <Navbar
-        style={{ backgroundColor: '#FF6A13', position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 }}
+        style={{ backgroundColor: '#FF6A13', position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, height: '90px' }}
         expand="lg"
         className="d-flex align-items-center justify-content-between"
       >

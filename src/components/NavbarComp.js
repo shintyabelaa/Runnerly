@@ -18,13 +18,13 @@ const NavbarComp = () => {
   };
 
   return (
-    <Navbar style={{ backgroundColor: '#FF6A13', position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 }} expand="lg" className="d-flex align-items-center justify-content-between">
+    <Navbar style={{ backgroundColor: '#FF6A13', position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, height: '90px' }} expand="lg" className="d-flex align-items-center justify-content-between">
       <Container>
         <Navbar.Brand href="#" className="d-flex align-items-center">
           <img
             src={RunnerlyLogo}
-            width="100px"
-            height="25px"
+            width="160px"
+            height="40px"
             className="d-inline-block align-top"
             alt="Runnerly Logo"
           />
@@ -32,11 +32,11 @@ const NavbarComp = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link as={Link} to="/" className="nav-link" style={{ marginRight: '20px' }}><h1>Home</h1></Nav.Link>
+            <Nav.Link as={Link} to="/" className="nav-link"><h1>Home</h1></Nav.Link>
             <Nav.Link as={Link} to="/login" className="nav-link"><h1>About</h1></Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link as={Link} to="/login" className="nav-link" style={{ marginLeft: '20px' }} onClick={handleUserIconClick}>
+            <Nav.Link as={Link} to="/login" className="nav-link" style={{}} onClick={handleUserIconClick}>
               <i className="fas fa-user footer-user-icon"></i>
             </Nav.Link>
           </Nav>

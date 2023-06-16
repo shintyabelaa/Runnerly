@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUsComp />} />
           <Route path="/article" element={<ArticleComp />} />
-          <Route path="/article/:id" element={<ArticleDetailComp />} />
+          <Route path="/article/:index" element={<ArticleDetailComp />} />
           <Route path="/how-it-works" element={<HowItWorksComp />} />
           <Route path="/login" element={<LoginComp />} />
           <Route path="/signup" element={<SignUpComp />} />
@@ -45,5 +45,4 @@ function Home() {
     </div>
   );
 }
-
 export default App;
