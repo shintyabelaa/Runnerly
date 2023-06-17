@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 200px;
+  padding-top: 160px;
   text-align: center;
 }
 
@@ -64,6 +64,15 @@ h1 {
   height: 400px;
   border-radius: 20px;
 }
+
+button.btn-signup.btn.btn-primary{
+  margin-top: 50px;
+}
+
+button.btn-login.btn.btn-primary{
+  margin-top: 50px;
+}
+
 
 @media (max-width: 768px) {
   .texthero {
@@ -254,6 +263,7 @@ button.slick-arrow.slick-prev{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   height: 100%;
+  min-width: 341px;
   border: none;
 }
 
@@ -267,13 +277,13 @@ button.slick-arrow.slick-prev{
 
 .card-body {
   padding: 20px;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   max-width: 400px; /* Mengatur lebar maksimum Card */
-  margin: 0 auto; /* Mengatur Card berada di tengah secara horizontal */
+  /* margin: 0 auto; Mengatur Card berada di tengah secara horizontal */
   height: auto; /* Mengatur tinggi sesuai dengan konten */
+  color: rgb(255, 106, 19);
 }
 
 .card-body a{
@@ -284,7 +294,7 @@ button.slick-arrow.slick-prev{
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #000000;
+  color:black;
 }
 
 .card-text {
@@ -297,6 +307,7 @@ button.slick-arrow.slick-prev{
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
+  color: #000000;
 }
 
 .HowItWorksComp {
@@ -409,7 +420,18 @@ button.slick-arrow.slick-prev{
     margin-right: 25px; /* Atur jarak antara hamburger dan logo */
   }
   
-  
+  .card-body {
+    height: 200px;
+  }
+
+  .card-footer{
+    margin-top: 10vw;
+  }
+
+  /* button.btn-signup.btn.btn-primary{
+    margin-top: 20px;
+  } */
+
   .ml-auto {
     margin-left: 0 !important;
   }
@@ -424,6 +446,7 @@ button.slick-arrow.slick-prev{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
   }
   
   .hero-card-container {

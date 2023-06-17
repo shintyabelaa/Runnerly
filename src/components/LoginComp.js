@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Navbar, Nav, Container, Card, Button } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+// import NavbarComp from './NavbarComp';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import RunnerlyLogo from '../assets/img/gallery/RunnerlyLogo.png';
+// import RunnerlyLogo from '../assets/img/gallery/RunnerlyLogo.png';
 import firebase from './firebase';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,14 +19,14 @@ const LoginComp = () => {
     setIsLoggedIn(location.pathname !== '/login');
   }, [location.pathname]);
 
-  const handleUserIconClick = () => {
-    if (isLoggedIn) {
-      setIsLoggedIn(false);
-      navigate('/');
-    } else {
-      navigate('/login');
-    }
-  };
+  // const handleUserIconClick = () => {
+  //   if (isLoggedIn) {
+  //     setIsLoggedIn(false);
+  //     navigate('/');
+  //   } else {
+  //     navigate('/login');
+  //   }
+  // };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -52,7 +53,7 @@ const LoginComp = () => {
   return (
     <div>
       {/* Navbar */}
-      <Navbar
+      {/* <Navbar
         style={{ backgroundColor: '#FF6A13', position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, height: '90px' }}
         expand="lg"
         className="d-flex align-items-center justify-content-between"
@@ -80,33 +81,33 @@ const LoginComp = () => {
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </Navbar> */}
 
       {/* Hero */}
       <div className="hero">
-        <div className="d-flex align-items-center justify-content-center" style={{ marginTop: '50px' }}>
+        <div className="d-flex align-items-center justify-content-center">
           {!isLoggedIn && (
-            <Card className="login-card small-card" style={{ width: '400px', backgroundColor: 'white', marginBottom: '130px', marginTop:'50px '}}>
+            <Card className="login-card small-card" style={{ backgroundColor: 'white', marginBottom: '130px'}}>
               <Card.Body>
-                <Card.Title className="login-card-title">Login</Card.Title>
-                <Card.Text>
+                <Card.Title className="login-card-title" style={{ fontSize: '22px', color: '#FF6A13' }}>Login</Card.Title>
+                <Card.Text style={{ maxHeight: '20vw', overflow: 'unset', fontSize: '20px', }}>
                   <form onSubmit={handleLogin}>
-                    <div className="form-group">
-                      <label>Email</label>
+                    <div className="form-group" style={{ marginTop: '30px' }}>
+                      <label style={{ display: 'flex', color:'#FF6A13' }}>Email</label>
                       <input
                         type="email"
                         className="form-control"
-                        placeholder="Masukkan email"
+                        placeholder="Enter email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
-                    <div className="form-group">
-                      <label>Password</label>
+                    <div className="form-group" style={{ marginTop: '20px' }}>
+                      <label style={{ display: 'flex', color:'#FF6A13' }}>Password</label>
                       <input
                         type="password"
                         className="form-control"
-                        placeholder="Masukkan password"
+                        placeholder="Enter password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />
@@ -116,7 +117,7 @@ const LoginComp = () => {
                       type="submit"
                       variant="primary"
                       className="btn-login"
-                      style={{ backgroundColor: '#FF6A13', border: 'none' }}
+                      style={{ backgroundColor: '#FF6A13', border: 'none', width:'100px' }}
                     >
                       Login
                     </Button>
@@ -124,8 +125,8 @@ const LoginComp = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <p className="text-center" style={{ marginTop: '50px'}}>
-                  Belum memiliki akun? <Link to="/signup">Daftar Sekarang</Link>
+                <p className="text-center" style={{ marginTop: '20px'}}>
+                  Belum memiliki akun? <Link to="/signup" style={{ color: "rgb(255, 106, 19)" }}>Daftar Sekarang</Link>
                 </p>
               </Card.Footer>
             </Card>

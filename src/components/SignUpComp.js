@@ -43,7 +43,7 @@ const SignUpComp = () => {
   return (
     <div>
       {/* Navbar */}
-      <Navbar
+      {/* <Navbar
         style={{ backgroundColor: '#FF6A13', position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 }}
         expand="lg"
         className="d-flex align-items-center justify-content-between"
@@ -64,18 +64,18 @@ const SignUpComp = () => {
             </Nav>
           </Navbar.Collapse>
         </Container>
-      </Navbar>
+      </Navbar> */}
 
       {/* Hero */}
       <div className="hero">
-        <div className="d-flex align-items-center justify-content-center" style={{ marginTop: '50px' }}>
-          <Card className="signup-card small-card" style={{ width: '400px', backgroundColor: 'white' }}>
+        <div className="d-flex align-items-center justify-content-center">
+          <Card className="signup-card small-card" style={{ backgroundColor: 'white', marginBottom: '130px'}}>
             <Card.Body>
-              <Card.Title className="signup-card-title">Sign Up</Card.Title>
-              <Card.Text>
+              <Card.Title className="signup-card-title" style={{ fontSize: '22px', color: '#FF6A13' }}>Sign Up</Card.Title>
+              <Card.Text style={{ maxHeight: '20vw', overflow: 'unset', fontSize: '20px' }}>
                 <form onSubmit={handleSignUp}>
-                  <div className="form-group">
-                    <label>Email</label>
+                  <div className="form-group" style={{ marginTop: '30px' }}>
+                    <label style={{ display: 'flex', color: '#FF6A13' }}>Email</label>
                     <input
                       type="email"
                       className="form-control"
@@ -84,8 +84,8 @@ const SignUpComp = () => {
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
-                  <div className="form-group">
-                    <label>Password</label>
+                  <div className="form-group" style={{ marginTop: '20px' }}>
+                    <label style={{ display: 'flex', color: '#FF6A13' }}>Password</label>
                     <input
                       type="password"
                       className="form-control"
@@ -98,7 +98,7 @@ const SignUpComp = () => {
                     type="submit"
                     variant="primary"
                     className="btn-signup"
-                    style={{ backgroundColor: '#FF6A13', border: 'none' }}
+                    style={{ backgroundColor: '#FF6A13', border: 'none', width:'100px' }}
                   >
                     Sign Up
                   </Button>
@@ -106,8 +106,8 @@ const SignUpComp = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <p className="text-center">
-                Sudah punya akun? <Link to="/login">Login Sekarang</Link>
+              <p className="text-center" style={{ marginTop: '20px'}}>
+                Sudah punya akun? <Link to="/login" style={{ color: "rgb(255, 106, 19)" }}>Login Sekarang</Link>
               </p>
             </Card.Footer>
           </Card>
