@@ -38,7 +38,7 @@ const FooterComp = () => {
             <ul>
               <li><a href="https://youtu.be/-HTyRDTykRA">Link Video</a></li>
               <li><a href="https://docs.google.com/document/d/119ICco8F1rxlc_8OFWPT4DtVG6rzr_Xu7NGXdwgVpAY/edit?pli=1">Project Brief</a></li>
-              <li><a href="#">https://github.com/shintyabelaa/Runnerly/tree/master</a></li>
+              <li><a href="https://github.com/shintyabelaa/Runnerly/tree/master">Repository Github</a></li>
               <li><a href="https://www.canva.com/design/DAFmK7wFoEY/Ozjk_HlB3ardbWNNt4OmPQ/edit">Presentation</a></li>
             </ul>
           </Col>
